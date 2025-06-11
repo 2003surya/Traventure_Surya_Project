@@ -1,0 +1,1314 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+body{
+    cursor:  url('../assets/dafault-cursor-2.png'),pointer;
+    scroll-behavior: smooth;
+}
+
+.HomePage {
+    position: relative;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: yellow;
+    border-bottom: 2px solid rgb(10, 68, 5);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 4px;
+
+}
+
+.alert p {
+    margin: 0; 
+    padding: 10px 20px;
+    text-align: center; 
+    color: black; 
+    font-family: "Jaldi", serif;
+    font-weight: 550;
+    font-size: 1rem;
+    font-style: normal;
+    border-radius: 20px;
+}
+
+
+.head h1::selection , .packHead h1::selection{
+    background-color: gray;
+    color: white;
+}
+.header{
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    gap: 30px;
+}
+.header a{
+    color: rgb(255, 225, 0);
+    font-size: 1.5rem;
+}
+.header a:hover{
+    transform: scale(1.1);
+}
+.navbar{
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: white;
+    box-shadow: 0px 0px 5px lightgray;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .col1{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 230, 0);
+    padding: 5px 10px;
+}
+.navbar .col1 img{
+    width: 150px;
+}
+.navbar .col1 p{
+    background-color: black;
+    color: white;
+    padding: 1px;
+    width: 100%;
+    text-align: center;
+    font-family: "Grand Hotel", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.navbar .col2 ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    /* padding: 10px 0px; */
+}
+.navbar .col2 ul a{
+    text-decoration: none;
+    font-family: "Jaldi", serif;
+    font-weight: 550;
+    font-size: 1.4rem;
+    font-style: normal;
+    color: rgba(68, 67, 67, 0.626);
+    padding: 5px;
+    width: 0px;
+    transition: 1s ease;
+    /* border-radius: 5px; */
+}
+.navbar .col2 ul a:hover{
+    border-bottom: 1.5px solid black;
+    color: black;
+    cursor:  url('../assets/dafault-cursor-2.png'),pointer;
+
+}
+.navbar.sticky-active {
+    background-color: rgba(25, 4, 4, 0.525);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    color: yellow; 
+    backdrop-filter: blur(2px);
+}
+.navbar.sticky-active .col1{
+    display: none;
+}
+
+.navbar.sticky-active .col1 p,
+.navbar.sticky-active .col2 ul a {
+    color: white !important;
+    /* border-color: yellow; optional if you want hover borders to also be yellow */
+}
+.navbar.navbar.sticky-active .userDet{
+    display: none;
+}
+
+.navbar .col3{
+    display: none;
+}
+
+.userDet a{
+    background-color: rgba(128, 128, 128, 0.525);
+    padding: 10px 21px;
+    border-radius: 50%;
+    font-size: large;
+    text-transform: uppercase;
+    font-family: "Jaldi", serif;
+    font-weight: 550;
+}
+.userDet .logInA{
+    background: none;
+}
+
+
+
+
+
+.HomePage .banner {
+    object-fit: contain;
+    background-size: cover;
+    height: 70vh;
+    background-repeat: no-repeat;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.HomePage .banner .contents {
+    padding: 0px 100px;
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+}
+
+.HomePage .banner .contents .content {
+    display: none;
+}
+
+.HomePage .banner .contents .content h1 {
+    font-family: "Bonheur Royale", serif;
+    font-weight: 500;
+    font-size: 6rem;
+    font-style: normal;
+    color: white;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.603));
+}
+
+.HomePage .banner .contents .content p {
+    text-align: center;
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(0, 0, 0, 0.304);
+    color: rgb(255, 230, 0);
+    backdrop-filter: blur(20%);
+    padding: 5px 10px;
+}
+
+.HomePage .banner .contents .active {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: .5s ease-in;
+}
+
+.HomePage .banner .nxtBtns {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.HomePage .banner .nxtBtns button {
+    padding: 10px 12px;
+    background-color: rgba(220, 220, 220, 0.267);
+    border: none;
+    color: white;
+    margin: 0px 20px;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.HomePage .banner .nxtBtns button:hover{
+    background-color: rgba(255, 166, 0, 0.909);
+    /* border-radius: 25px; */
+}
+
+
+
+
+.HomePage .popularPacks{
+    text-align: center;
+    cursor: pointer;
+    margin: 100px 0px;
+}
+
+.HomePage .popularPacks .packHead h1{
+    margin: 100px 0px 40px 0px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.8rem;
+    color: lightgray;
+}
+
+
+.HomePage .popularPacks .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    cursor: pointer;
+    margin: 0px 0px 30px 0px ;
+}
+.HomePage .popularPacks .cards .card{
+    width: 350px;
+    height: 452px;
+    /* border: 5px; */
+    position: relative;
+    overflow: hidden;
+}
+
+.HomePage .popularPacks .cards .card .content{
+    position: absolute;
+    top: 90%;
+    /* transform: translateY(-50%); */
+    text-align: center;
+    padding: 0px 10px;
+    text-align: center;
+    width: 100%;
+    transition: .3s ease;
+}
+.HomePage .popularPacks .cards .card .content h1{
+    color: white;
+    font-family: "Krona One", serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.279);
+}
+.HomePage .popularPacks .cards .card .content p{
+    color: lightgray;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.74);
+    font-family: "Sofia Sans Extra Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin: 3px 0px 20px 0px;
+    text-align: justify;
+    padding: 3px;
+}
+.HomePage .popularPacks .cards .card .content a{
+    background-color: rgb(255, 230, 0);
+    color: black;
+    padding: 5px 7px;
+    text-decoration: none;
+    transition: all .3s ease;
+    text-decoration: none;
+    font-family: "Jaldi", serif;
+    font-weight: 550;
+}
+.HomePage .popularPacks .cards .card .content a:hover{
+    background-color: grey;
+    color: white;
+}
+
+.HomePage .popularPacks .cards .card .imgSection{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+.HomePage .popularPacks .cards .card:hover{
+    cursor: url('../assets/flight-cursor (2).png'),auto;
+}
+.HomePage .popularPacks .cards .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s ease;
+    /* border-radius: 5px; */
+    filter: brightness(120%);
+    
+}
+.HomePage .popularPacks .cards .card:hover img{
+    transform: scale(1.1);
+    filter: brightness(90%);
+}
+.HomePage .popularPacks .cards .card:hover  h1{
+    background: none;
+    filter: drop-shadow(0px 0px 1px black);
+}
+.HomePage .popularPacks .cards .card:hover .content{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.HomePage .popularPacks .cards .cardBtns{
+    display: none;
+}
+
+.HomePage .popularPacks .more a{
+    background-color: black;
+    color: rgb(255, 230, 0);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: "Jaldi", serif;
+    font-weight: 550;
+    transition: all .5s ease;
+}
+.HomePage .popularPacks .more a:hover{
+    background-color: rgb(255, 230, 0);
+    color: black;
+}
+
+
+.HomePage .incIndia{
+    margin: 100px 50px;
+    cursor: url('../assets/india-cursor-2.png'), auto;
+}
+.HomePage .incIndia .head{
+    background-image: url(../assets/incIndia.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position-x: 80%;
+}
+.HomePage .incIndia .head h1{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.8rem;
+    color: lightgray;
+}
+.HomePage .incIndia .content {
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.HomePage .incIndia .content .col1 {
+    flex: 1;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #f5f5f5;
+    padding: 10px;
+    height: 400px;
+}
+.HomePage .incIndia .content .col1::-webkit-scrollbar{
+    display: none;
+}
+
+.HomePage .incIndia .content .col1 img {
+    flex-shrink: 0;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-right: 12px;
+    border-radius: 10px;
+    scroll-snap-align: center;
+}
+
+.HomePage .incIndia .content .col2 {
+    flex: 2;
+    height: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #0000001a;
+    text-align: center;
+    padding: 20px;
+}
+.HomePage .incIndia .content .col2 h1{
+    font-family: "Rancho", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin: 5px 0px;
+}
+.HomePage .incIndia .content .col2 p{
+    margin: 10px 0px;
+    text-align: justify;
+    font-family: "Rethink Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: rgba(255, 208, 0, 0.45);
+  padding: 10px;
+  margin: 20px 10px;
+  transition: .5s ease;
+}
+
+.HomePage .incIndia .content .col2 a{
+    background-color: black;
+    color: rgb(255, 230, 0);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: "Jaldi", serif;
+    font-weight: 550;
+    transition: all .5s ease;
+    margin: 10px 0px;
+}
+.HomePage .incIndia .content .col2 a:hover{
+    background-color: rgb(255, 230, 0);
+    color: black;
+}
+
+
+
+
+
+
+.HomePage .welcome{
+    position: relative;
+    margin: 100px 50px;
+    align-items: center;
+}
+.HomePage .welcome .head{
+    align-items: center;
+}
+.HomePage .welcome .head h1{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.8rem;
+    color: rgb(21, 27, 26);
+
+}
+.HomePage .welcome .imgSection{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-70%);
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+.HomePage .welcome .imgSection img{
+    width: 70%;
+    filter: opacity(5%);
+}
+
+.HomePage .welcome .content p{
+    line-height: 25px;
+    color: rgb(91, 90, 90);
+    font-family: "Rethink Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-align: justify;
+}
+.HomePage .welcome .more{
+    margin: 20px 0px;
+    float: right;
+}
+.HomePage .welcome .more a{
+    color: black;
+    text-decoration: none;
+    text-decoration: none;
+    font-family: "Jaldi", serif;
+    font-weight: 550;
+    font-size: 1.2rem;
+    transition: .5s ease;   
+}
+
+.HomePage .welcome .more a:hover{
+    color: rgb(255, 230, 0);
+    background-color: black;
+    padding: 5px 10px;
+}
+
+
+.HomePage .premium{
+    margin: 50px 20px;
+    filter: drop-shadow(0px 0px 10px rgba(71, 71, 71, 0.356));
+}
+.HomePage .premium .head h1{
+    margin-top: 150px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.8rem;
+    color: rgba(59, 61, 61, 0.288);
+}
+.HomePage .premium .cards{
+    display: flex;
+    overflow: scroll;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 20px;
+    gap: 25px;
+    position: relative;
+}
+.HomePage .premium .cards .nxtBtns{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    position: fixed;
+}
+.HomePage .premium .cards .nxtBtns button{
+    padding: 15px 17px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 1px 1px 10px rgb(165, 221, 244);
+}
+.HomePage .premium .cards .nxtBtns button:hover{
+    box-shadow: 1px 1px 10px rgb(95, 96, 96);
+}
+.HomePage .premium .cards::-webkit-scrollbar{
+    display: none;
+}
+.HomePage .premium .cards .card{
+    min-width: 340px;
+    height: 80vh;
+    background-color: rgb(255, 220, 0);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+.HomePage .premium .cards .card .imgSection{
+    width: 100%;
+    height: 96%;
+    overflow: hidden;
+}
+.HomePage .premium .cards .card .imgSection img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+.HomePage .premium .cards .card .content{
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    transform: translateY(-80%);
+    background-color: rgb(255, 220, 0);
+    padding: 5px 0px;
+}
+.HomePage .premium .cards .card .content h1{
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    line-height: 35px;
+    font-style: normal;
+}
+.HomePage .premium .cards .card .content p{
+    padding: 15px 0px 5px 0px;
+    color: rgb(66, 66, 66);
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.HomePage .premium .cards .card .foot p{
+    color: rgb(66, 66, 66);
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+}
+.HomePage .premium .cards .card .watermark{
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+.HomePage .premium .cards .card .watermark p{
+    font-size: 30px;
+    color: rgba(128, 128, 128, 0.228);
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+} 
+
+
+.HomePage .premium .cards .card:hover img{
+    transform: scale(1.1);
+}
+
+.HomePage .premium .more{
+    display: flex;
+    justify-content: center;
+}
+.HomePage .premium .more a{
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px 20px;
+    color: rgb(255, 230, 0);
+    font-family: "Jaldi", serif;
+    font-weight: 550;
+    transition: all .5s ease;
+    margin-top: 20px;
+}
+.HomePage .premium .more a:hover{
+    background-color: rgb(255, 230, 0);
+    color: black;
+}
+
+
+
+
+.HomePage .tn{
+    margin: 10px 10px;
+}
+.HomePage .tn .head h1{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: oblique;
+    font-size: 2rem;
+    color: rgba(59, 61, 61, 0.735);
+    margin-left: 15px;
+}
+.HomePage .tn .cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+}
+.HomePage .tn .cards .nxtBtn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+.HomePage .tn .cards .card{
+    margin: 20px 0px;
+    width: 380px;
+    height: 440px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(255, 254, 254, 0.674);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgba(224, 255, 255, 0.363); */
+    transition: .5s ease;
+}
+.HomePage .tn .cards .card:hover{
+    transform: scale(1.05);
+    border-bottom: 5px solid rgb(0, 0, 0);
+    border: 2px solid black;
+}
+.HomePage .tn .cards .card .imgSection{
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    position: relative;
+}
+.HomePage .tn .card .imgSection .best{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(255, 230, 0);
+    padding: 2px 10px;
+}
+.HomePage .tn .cards .card .imgSection img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.HomePage .tn .cards .card .content{
+    height: 30%;
+    width: 100%;
+    text-align: center;
+}
+.HomePage .tn .cards .card .content h1{
+    padding: 5px 0px;
+}
+.HomePage .tn .cards .card .content .col{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px 0px;
+}
+.HomePage .tn .cards .card .content .col p:nth-child(1){
+    padding-right: 20px;
+    border-right: 1px solid black;
+}
+.HomePage .tn .cards .card a{
+    padding: 5px 15px;
+    text-decoration: none;
+    background-color: black;
+    color: rgb(255, 230, 0);
+    float: right;
+    font-family: "Jaldi", serif;
+    font-weight: 300;
+    transition: all .5s ease;
+    border-radius: 5px;
+}
+.HomePage .tn .cards .card a:hover{
+    background-color: rgb(255, 230, 0);
+    color: black;
+}
+
+
+
+
+.enquirySection{
+    display: flex;
+    margin: 30px 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(211, 211, 211, 0.379);
+    padding: 30px 0px;
+}
+.enquirySection .col1{
+    flex: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 20px;
+}
+.enquirySection .col1 h1{
+    text-transform: uppercase;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+}
+.enquirySection .col1 img{
+    width: 100%;
+    filter: opacity(30%);
+}
+.enquirySection .col1 p{
+    font-family: "Jaldi", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: rgb(20, 31, 24);
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}  
+
+
+.enquirySection .col2{
+    flex: 1;   
+    align-items: center; 
+    background-color: black;
+    margin: 0px 20px;
+    border-radius: 20px;
+}
+.enquirySection .col2 form h1{
+    color: white;
+    font-family: "Jaldi", serif;
+    font-weight: 500;
+}
+.enquirySection .col2 form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+}
+.enquirySection .col2 form label{
+    text-align: center;
+    margin-top: 5px;
+    color: rgb(255, 230, 0);
+    font-family: "Jaldi", serif;
+    font-weight: 300;
+}
+.enquirySection .col2 form input{
+    min-width: 70%;
+    height: 40px;
+    margin: 5px 0px;
+}
+.enquirySection .col2 form input:focus{
+    outline: 3px solid rgb(255, 230, 0);
+}
+.enquirySection .col2 form button{
+    width: 150px;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    background-color: rgb(255, 230, 0);
+    border: none;
+    color: black;
+    font-family: "Jaldi", serif;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: .5s ease;
+    border: 1px solid rgb(255, 230, 0);
+}
+.enquirySection .col2 form button:hover{
+    background-color: black;
+    color: rgb(255, 230, 0);
+    border: 1px solid rgb(255, 230, 0);
+}
+.EnquiryMsg{
+    align-items: center;
+    width: 100%;
+}
+.EnquiryMsg h4{
+    color: white;
+    padding: 30px 0px 10px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+}
+.EnquiryMsg h3{
+    color: gray;
+    padding: 5px 0px 20px 0px;
+    text-align: center
+}
+.EnquiryMsg button{
+    display: flex;
+    justify-content: center;
+    padding: 15px 25px;
+    background-color: yellow;
+    outline: none;
+    border-radius: 12px;
+    border: 4px solid black;
+}
+
+
+
+.footer .row1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgrey;
+    padding: 20px 0px;
+}
+.footer .row1 h1{
+    flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    color: gray;
+}
+.footer .row1 form{
+    flex: 1;
+    text-align: center;
+}
+.footer .row1 form input{
+    width: 50%;
+    height: 40px;
+}
+.footer .row1 form input:focus{
+    outline: 2px solid grey;
+}
+.footer .row1 form button{
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    color: rgb(255, 230, 0);
+    border: none;
+}
+.footer .row1 form button:hover{
+    background-color: rgb(255, 230, 0);
+    color: black;
+}
+
+.footer .row2{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    align-items: center;
+}
+.footer .row2 .col1{
+    text-align: center;
+}
+.footer .row2 .col1 p{
+    color: rgb(255, 230, 0);
+    padding: 10px 0px;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+}
+.footer .row2 .col1 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer .row2 .col1 ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.footer .row2 .col1 ul li a:hover{
+    color: rgb(255, 230, 0);
+}
+
+.footer .row2 .col2{
+    text-align: center;
+    color: rgb(203, 203, 203);
+}
+.footer .row2 .col2 p{
+    color: rgb(255, 230, 0);
+    padding: 10px 0px;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 400;   
+}
+.footer .row2 .col2 h1{
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;   
+}
+
+.footer .row2 .col3{
+    text-align: center;
+    color: white;
+}
+.footer .row2 .col3 p{
+    color: rgb(255, 230, 0);
+    padding: 10px 0px;
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 400;  
+}
+.footer .row2 .col3 ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+}
+.footer .row2 .col3 ul li a{
+    color: white;
+    font-size: 40px;
+}
+.footer .row2 .col3 ul li a:hover{
+    color: rgb(255, 230, 0);
+}
+@media(max-width : 769px){
+    .header{
+        display: none;
+    }
+
+    .navbar.sticky-active{
+        justify-content: end;
+        background: none;
+        filter: none;
+    }
+    .navbar .col2{
+        display: none;
+    }
+
+    .navbar .col3{
+        display: flex;
+        align-items: end;
+    }
+    .navbar .col3 .bar button{
+        background: none;
+        border: none;
+        font-size: 2rem;
+        margin-right: 20px;
+    }
+
+    body{
+        position: relative;
+    }
+
+    .navbar .col3 .barList{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        text-align: center;
+        height: 100vh;
+        background-color: black;
+        padding: 5px 0px;
+        transition: .5s ease;
+    }
+    .navbar .col3 .barList ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        justify-content: space-around;
+        height: 100%;
+    }
+    .navbar .col3 .barList ul li a{
+        text-decoration: none;
+        font-family: "Jaldi", serif;
+        font-weight: 550;
+        font-size: 1.4rem;
+        font-style: normal;
+        color: white;   
+    }
+    .navbar .col3 .barList ul li a:hover{
+        color: rgb(255, 230, 0);
+    }
+
+    .navbar .col3 .cancel{
+        position: absolute;
+        top: 10px;
+        right: -5px;
+    }
+    .navbar .col3 .cancel button{
+        padding: 10px 13px;
+        border-radius: 25px;
+        border: none;
+        background: none;
+        color: white;
+        font-size: xx-large;
+    }
+
+
+    .banner .contents{
+        padding: 0px;
+        margin: 0px;
+    }
+    .banner .contents .content h1{
+        padding: 0;
+        margin: 0;
+    }
+    .banner .contents .content p{
+
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+    }
+    .banner .nxtBtns{
+        top: 88%;
+        margin: 0;
+    }
+    .banner .nxtBtns button{
+        margin: 2px 10px;
+        padding: 10px;
+    }
+
+    .head{
+        font-size: 2rem;
+    }
+    
+    .popularPacks{
+        padding: 0px 10px;
+        margin-bottom: 100px;
+    }
+    
+    .popularPacks .packHead h1{
+        font-size: 1rem;
+        line-height: 30px;
+        font-weight: 600;
+    }
+    .popularPacks .cards{
+        flex-wrap: nowrap;
+        position: relative;
+    }
+    .popularPacks .cards .card{
+        display: none;
+    }
+    .popularPacks .cards .acti{
+        display: block;
+    }
+    .popularPacks .cards .card .content{
+        top : 92%;
+        transform: translateY(-92%);
+    }
+    .popularPacks .cards .card:hover .content{
+        top: 70%;
+    }
+    .popularPacks .cards .card .content h1{
+        margin: 0px 0px 10px 0px;
+    }
+    .popularPacks .cards .card .content p{
+        display: none;
+    }
+
+    .popularPacks .cards .cardBtns{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        top: 50%;
+    }
+    .popularPacks .cards .cardBtns button{
+        padding: 10px 13px;
+        background-color: rgba(220, 220, 220, 0.395);
+        border: none;
+        color: white;
+        /* margin: 0px 10px; */
+        border-radius: 5px;
+        transition: .3s ease;
+    }
+    .popularPacks .cards .cardBtns button:hover{
+        background-color: orange;
+        border-radius: 25px;
+    }
+
+    .popularPacks .cards .card{
+        min-width: 100%;
+        height: 400px;
+    }
+    .popularPacks .cards .card:hover p{
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.74);
+
+    }
+
+
+    .incIndia{
+        margin: 10px;
+    }
+    .incIndia .head{
+        background-size: 40%;
+        background-position-x: 100%;
+    }
+    .incIndia .content{
+        flex-direction: column;
+    }
+    .incIndia .content .col2{
+        padding: 20px 0px;
+        background-color: rgba(211, 211, 211, 0.416);
+    }
+    .incIndia .content .col2 h1{
+        font-size: 1.5rem;
+    }
+
+
+
+    .welcome{
+        margin: 100px 10px;
+    }
+    .welcome .head h1{
+        font-size: 1.2rem;
+        padding: 0;
+    }
+
+
+
+    .premium{
+        margin: 50px 10px;
+    }
+    .premium .head h1{
+        font-size: 1.5rem;
+    }
+    .premium .cards{
+        padding: 0;
+        margin: 0;
+    }
+    .premium .cards .nxtBtns{
+        right: 0;
+    }
+    .premium .cards .card{
+        min-width: 320px;
+    }
+
+    .tn{
+        margin: 10px ;
+    }
+    .tn .cards{
+        justify-content: center;
+    }
+    .tn .cards .nxtBtn{
+        display: flex;
+        z-index: 2;
+    }
+    .tn .cards .nxtBtn button{
+        padding: 10px 12px;
+        border-radius: 25px;
+        border: 1px solid skyblue;
+    }
+    .tn .cards .card{
+        display: none;
+        margin: 10px 0px;
+        width: 90%;
+        border: 3px solid black;
+    }
+    .tn .cards .card:hover{
+        transform: scale(1.0);
+    }
+    .tn .cards .active{
+        display: block;
+    }
+    
+
+
+
+    .enquirySection{
+        flex-direction: column;
+    }
+    .enquirySection .col1 img{
+        width: 100%;
+    }
+    .enquirySection .col1 h1{
+        font-size: 1.5rem;
+    }
+
+
+    .enquirySection .col2 {
+        margin: 10px;
+        padding: 10px;
+        width: 90%;
+    }
+    .enquirySection .col2 form h1{
+        font-size: 1rem;
+    }
+    .enquirySection .col2 form{
+        padding: 20px 10px;
+    }
+    .enquirySection .col2 form input{
+        width: 100%;
+    }
+
+
+    .footer .row1{
+        flex-direction: column;
+        gap: 30px;      
+    }
+    .footer .row1 form{
+        width: 100%;
+    }
+    .footer .row1 form input{
+        width: 70%;
+    }
+    .footer .row1 form button{
+        width: 20%;
+    }
+
+    .footer .row2{
+        flex-direction: column;
+    }
+
+    .footer .row2 .col1, .col2{
+        padding-bottom: 10px ;
+        border-bottom: 1px solid white;
+    }
+}
+
+
+
+
+
+

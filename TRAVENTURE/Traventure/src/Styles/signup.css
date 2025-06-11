@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p::selection{
+    background-color: yellow;
+    color: black;
+}
+.signup{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.signup .left{
+    flex: 1;
+    padding: 20px;
+    margin: 0px 20px;
+    border-radius: 10px 2px 15px 30px;
+    text-align: start;
+}
+.signup img{
+    width: 70%;
+    height: fit-content;
+    filter: opacity(.1);
+}
+.signup .left h1{
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 5px 0px;
+}
+.signup .left h4{
+    color: rgb(101, 100, 100);
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    padding: 5px 0px;
+}
+.signup .left p{
+    text-align: justify;
+    line-height: 25px;
+    padding: 10px 0px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: rgba(128, 128, 128, 0.153);
+    padding: 10px;
+    transition: .5s ease;
+}
+.signup .left p:hover{
+    background-color: rgba(46, 46, 46, 0.598);
+    color: white;
+    cursor: pointer;
+}
+
+
+.signup .right{
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding: 40px 0px;
+    margin: 0px 30px;
+    /* border: 1px solid rgba(128, 128, 128, 0.509); */
+    background-image: linear-gradient(to bottom,white,hsla(198, 83%, 77%, 0.313));
+    border-radius: 10px 20px 30px 40px;
+}
+.signup .right p{
+      font-family: "Ancizar Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: larger;
+  font-style: normal;
+  color :rgba(62, 61, 61, 0.655);
+}
+#otpFailed{
+    color: red;
+}
+#alradyUserMsg{
+    padding: 10px 0px;
+    color: #036578;
+}
+.signup .right h1{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding: 10px 0px 40px 10px;
+    font-size: 40px;
+}
+.signup .right .number-input-section{
+    padding: 20px 0px;
+}
+.signup .right .number-input-section select{
+    width: 15%;
+    height: 45px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+.signup .right .number-input-section select option{
+    font-size: 20px;
+}
+.signup .right .number-input-section input{
+    width: 65%;
+    height: 45px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+.signup .right .number-input-section input:focus{
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+.signup .right .number-input-section button{
+    padding: 10px 30px;
+    margin-top: 20px;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    cursor: not-allowed;
+}
+.signup .right .number-input-section button:enabled:hover{
+    background-color: rgb(11, 164, 206);
+    border: 2px solid rgb(11, 164, 206);
+    color: white;
+    transition: .3s ease;
+}
+
+
+
+.otp-type-section .inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.otp-input {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.otp-input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+.otp-verification-section p{
+    padding: 10px 0px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+#otp-verify-btn{
+    padding: 10px 30px;
+    margin-top: 20px;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+}
+#otp-verify-btn:hover{
+    background-color: rgb(11, 164, 206);
+    border: 2px solid rgb(1, 54, 68);
+    color: white;
+    transition: .3s ease;
+}
+
+@media(max-width : 769px){
+    .signup{
+        flex-direction: column;
+    }
+    .signup .left{
+        text-align: center;
+        padding: 0;
+        align-content: center;
+        margin: 0;
+    }
+    .signup .left p{
+        display: none;
+    }
+    .signup .right{
+        border: none;
+        align-content: top;
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        background-color: rgba(128, 128, 128, 0.041);
+    }
+    .signup .right .number-input-section select{
+        width: 25%;
+    }
+    .signup .right .number-input-section input{
+        width: 70%;
+    }
+}

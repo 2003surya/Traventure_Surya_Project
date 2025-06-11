@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.overAll{
+    background: linear-gradient(135deg, #6490ff, #1e2739);
+  min-height: 100vh;
+  padding: 40px;
+}
+.overAll .RegistrationAlert p{
+    background-image: linear-gradient(135deg, rgb(255, 196, 0),rgb(230, 188, 112));
+    text-transform: capitalize;
+}
+.clearForm{
+    padding: 10px 0px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+.clearForm button{
+    padding: 10px 20px;
+    background-image: linear-gradient(135deg,yellow,orange);
+    border: none;
+    border-radius: 12px;
+    transition: .5s ease;
+}
+.heading{
+    text-align: center;
+    color: white;
+    padding: 10px 0px;
+    font-size: 1.5rem;
+      font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+}
+.overAll .templeFormContainer {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #6aa6ff 0%, #abd6ff 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.overAll .templeFormContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.overAll .templeName, .overAll .aboutTemple ,.overAll .location{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.overAll .templeName label, .overAll .aboutTemple label ,.overAll .location{
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.overAll .templeName input, .overAll .aboutTemple textarea ,.overAll .location input ,.overAll .templeImageUrls input,.overAll .days input,.overAll .nights input{
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #ffffff70;
+}
+
+.overAll .templeName input:focus,.overAll .aboutTemple textarea:focus ,.overAll .location input:focus ,.overAll .templeImageUrls input:focus,.overAll .days input:focus{
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    background-color: white;
+}
+
+ .head {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.head::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #4a90e2, #8e44ad);
+    border-radius: 3px;
+}
+
+.overAll .checkBoxs,.overAll .checkBoxs2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.overAll .checkBoxs p,.overAll .checkBoxs2 p {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.overAll .checkBoxs p:hover,.overAll .checkBoxs2 p:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.overAll .checkBoxs p.active,.overAll .checkBoxs2 p.active {
+    background: linear-gradient(135deg, #4a90e2 0%, #8e44ad 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.overAll .aboutTemple textarea {
+    min-height: 120px;
+    resize: vertical;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+.overAll .templeImageUrls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.overAll .templeImageUrls .row {
+    display: flex;
+    gap: 1rem;
+}
+
+.overAll .templeImageUrls .left,.overAll .templeImageUrls .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.overAll .templeImageUrls label {
+    font-size: 0.9rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.overAll .templeImageUrls input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.overAll .days_nights{
+    display: flex;
+    gap: 20px;
+}
+
+.overAll .submitBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.overAll .submitBtn button {
+    background: linear-gradient(135deg, #4a90e2 0%, #8e44ad 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.overAll .submitBtn button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.4);
+}
+
+.overAll .submitBtn button:active {
+    transform: translateY(1px);
+}
+
+.overAll .templeFormContainer input{
+    color: #1e2739;
+    font-weight: 600;
+}
+
+.overAll .row-img{  
+    display: flex;
+    justify-content: space-around;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .templeFormContainer {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .templeImageUrls .row {
+        flex-direction: column;
+    }
+}

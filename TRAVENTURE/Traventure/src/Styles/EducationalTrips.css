@@ -1,0 +1,114 @@
+
+
+.contentStart {
+    padding: 30px 5%;
+}
+
+.pageTitle {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.pageSubtitle {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.tripCard {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.tripCard:hover {
+    transform: translateY(-5px);
+}
+
+.tripHeader {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+}
+
+.tripHeader h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.tripMeta {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.tripContent {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.tripColumn {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+.tripColumn h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.tripColumn ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tripColumn li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.tripColumn li:before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+.tripColumn p {
+    margin: 8px 0;
+}
+
+.tripColumn p strong {
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .col2 {
+        display: none;
+    }
+    
+    .col3 {
+        display: block;
+    }
+    
+    .tripContent {
+        flex-direction: column;
+    }
+    
+    .tripColumn {
+        margin-bottom: 20px;
+    }
+}

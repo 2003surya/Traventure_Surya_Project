@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.register{
+    display: flex;
+    justify-content: space-around;
+}
+.register .left-side {
+  flex: 1.5;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  /* height: 100vh; */
+}
+
+.left-side img{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+  
+  .banners-wrapper {
+    /* overflow: hidden; */
+    position: relative;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+  }
+  
+  .banners {
+    display: flex;
+    transition: transform .8s ease-in-out;
+    width: 100%; /* 3 banners */
+    /* position: relative; */
+    /* height: 100%; */
+  }
+  
+  .banner {
+    min-width: 100%;
+    padding: 50px 55px;
+    /* box-sizing: border-box; */
+  }
+  .banner h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3em;
+    color: rgb(218, 211, 144);
+    }
+  .banner h4{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color: gray;
+    font-style: normal;
+    text-align: end;
+}
+  .banner p{
+    text-align: justify;
+    padding: 10px 0px;
+    line-height: 25px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+  }
+  .left-side .buttons {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(50%);
+    pointer-events: none; /* allows clicks to pass through container */
+    z-index: 1;
+  }
+  
+  .left-side .buttons button {
+    background-color: white;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    color: rgba(0, 132, 255, 0.413);
+    pointer-events: all; /* ensures buttons are clickable */
+    z-index: 100;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.162);
+  }
+  
+  .left-side .buttons button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 132, 255, 0.413);   
+    color: gray;
+    }
+  
+  
+.register .right-side{
+    flex: 1;
+    align-items: center;
+    justify-items: center;
+    background-image: linear-gradient(to bottom,white,hsla(192, 95%, 83%, 0.201));
+    margin: 0px 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.register .right-side h1{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding: 10px 0px 40px 10px;
+    font-size: 40px;
+}
+.register .right-side form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 0px;
+}
+.register .right-side form input[type ="email"]{
+  background-color: rgba(163, 162, 162, 0.253);
+  font-size: larger;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+.register .right-side form input,select{
+    width: 75%;
+    height: 45px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.register .right-side form input:focus::placeholder{
+    position: absolute;
+    left: 20px;
+    font-size: medium;
+}
+.register .right-side form input:focus,select:focus{
+    outline: 2px solid rgb(0, 132, 255);
+    filter: drop-shadow(1px 1px 3px rgba(0, 132, 255, 0.228));
+    border: none;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.register .right-side form input:focus,select:focus{
+    font-size: x-large;
+}
+.register .right-side form select:focus option{
+    font-size: medium;
+}
+.register .right-side form button{
+    padding: 12px 40px;
+    background-color: rgb(0, 132, 255);
+    border-color: rgb(2, 43, 82);
+    border: 2px solid;
+    border-radius: 15px;
+    color: white;
+    /* cursor: not-allowed; */
+}
+
+@media (max-width: 768px) {
+    .register{
+      flex-direction: column-reverse;
+    }
+    .register .left-side{
+      width: 90%;
+      height: max-content;
+    }
+    .register .right-side{
+        width: 90%;
+    }
+}
+  

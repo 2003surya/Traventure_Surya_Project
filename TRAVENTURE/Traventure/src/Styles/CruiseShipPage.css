@@ -1,0 +1,174 @@
+/* Cruise Ship Page Styles */
+.contentStart {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cruizPlan {
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cruizPlan:hover {
+  transform: translateY(-5px);
+}
+
+.cruizPlan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.cruizPlan video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.cruizPlan > * {
+  position: relative;
+  z-index: 2;
+}
+
+.cruizPlan img {
+  width: 200px;
+  height: auto;
+  margin: 1.5rem auto;
+  display: block;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cruizPlan h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cruizPlan .seperate {
+  display: flex;
+  padding: 0 2rem 2rem;
+  gap: 2rem;
+}
+
+.cruizPlan .left {
+  flex: 2;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.cruizPlan .left p {
+  color: white;
+  line-height: 2;
+  font-size: 1.1rem;
+  white-space: pre-line;
+    text-align: justify;
+    font-family: "Poppins", serif;
+    font-weight: 400;  
+}
+.cruizPlan .left button{
+    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(135deg,rgb(255, 166, 0),rgb(255, 68, 0));
+    border-radius: 12px;
+    transition: .5s ease;
+    margin-top: 20px;
+    filter: opacity(0.5);
+}
+.cruizPlan .left button:hover{
+    transform: translateY(-5px);
+    filter: opacity(1.1);
+}
+.cruizPlan .right {
+  width: 300px;
+  padding: 1.5rem;
+  background: rgba(52, 152, 219, 0.9);
+  background-image: linear-gradient(135deg,rgba(52, 152, 219, 0.9),rgb(107, 179, 212));
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cruizPlan .right p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.5rem;
+    font-family: "Poppins", serif;
+    font-weight: 400;  
+}
+
+.cruizPlan .right p::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .seperate {
+    flex-direction: column;
+  }
+  
+  .cruizPlan .right {
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .contentStart {
+    padding: 1rem;
+  }
+  
+  .cruizPlan {
+    min-height: 400px;
+  }
+  
+  .cruizPlan h1 {
+    font-size: 1.8rem;
+  }
+  
+  .cruizPlan .seperate {
+    padding: 0 1rem 1rem;
+  }
+  
+  .cruizPlan .left,.cruizPlan .right {
+    padding: 1rem;
+  }
+}
